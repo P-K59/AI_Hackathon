@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nirmaan AI Hackathon 2026 | Centre of Excellence, Nagpur</title>
+  <meta name="description" content="Nirmaan AI Hackathon 2026 – Centre of Excellence, Nagpur. Theme: AI in India – AI for India. Supported by Redington Foundation & Microsoft. Fast 5-minute student registration.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Modal styles for shortlist viewer */
+    .shortlist-modal-body {
+      max-height: 65vh;
+      overflow-y: auto;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/images/ai-hackathon-logo.jpg" alt="Nirmaan AI Hackathon 2026 Logo" class="brand-logo-img">
+        <div class="brand-text-wrap">
+          <span class="brand-title">Nirmaan AI Hackathon 2026</span>
+          <span class="brand-subtitle">Centre of Excellence • Nagpur</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#shortlist-section" class="nav-link" id="nav-shortlist-link">Shortlist Results</a></li>
+          <li><a href="#tracks" class="nav-link">Tracks</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
+          <li><a href="#eligibility" class="nav-link">Eligibility</a></li>
+          <li><a href="status.html" class="nav-link">Check Status</a></li>
+          <li><a href="register.html" class="nav-btn-primary">Register Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Key Partners & Collaborators Banner -->
+  <div class="partners-banner-section">
+    <div class="partners-inner">
+      <div class="partners-label">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        <span>Organized & Supported By</span>
+      </div>
+
+      <div class="partners-logos-grid">
+        <!-- Redington Foundation -->
+        <div class="partner-logo-item">
+          <img src="assets/images/redington-foundation.jpg" alt="Redington Foundation" class="partner-logo-img">
+          <div class="partner-logo-text">
+            <span class="partner-logo-name">Redington Foundation</span>
+            <span class="partner-logo-role">CSR Initiative • Redington Group</span>
+          </div>
+        </div>
+
+        <!-- Nirmaan.org -->
+        <div class="partner-logo-item">
+          <img src="assets/images/nirmaan-org.png" alt="Nirmaan.org" class="partner-logo-img">
+          <div class="partner-logo-text">
+            <span class="partner-logo-name">Nirmaan Organization</span>
+            <span class="partner-logo-role">Execution Partner</span>
+          </div>
+        </div>
+
+        <!-- Microsoft -->
+        <div class="partner-logo-item">
+          <img src="assets/images/microsoft.svg" alt="Microsoft" class="partner-logo-img" style="height:32px;">
+          <div class="partner-logo-text">
+            <span class="partner-logo-name">Microsoft</span>
+            <span class="partner-logo-role">Technology Partner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-canvas-wrap">
+      <canvas id="neural-network-canvas"></canvas>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text-col">
+        <div class="hero-badge">
+          <span class="hero-badge-pulse"></span>
+          <span>Nirmaan Centre of Excellence • Nagpur</span>
+        </div>
+
+        <h1 class="hero-title">
+          AI in India – <br><span class="highlight">AI for India</span>
+        </h1>
+
+        <p class="hero-description">
+          Have an idea that could solve a real problem? Tell us what you want to solve. You can join with just an idea. No coding experience needed.
+        </p>
+
+        <div class="hero-actions">
+          <a href="register.html" class="btn btn-cta" id="hero-register-btn">
+            Register Now
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="status.html" class="btn btn-secondary" style="border-color:rgba(255,255,255,0.4); background:rgba(255,255,255,0.15); color:#FFFFFF;">
+            Track Your Status
+          </a>
+        </div>
+
+        <div class="hero-meta-strip">
+          <div class="hero-meta-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>5-minute form • 12 simple answers</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>Solo or Teams (up to 4 members)</span>
+          </div>
+          <div class="hero-meta-item" style="background:rgba(251,191,36,0.2); border:1px solid rgba(251,191,36,0.5); padding:4px 10px; border-radius:8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FDE68A" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span style="font-weight:700; color:#FFFFFF;">Final Round: October 15–16, 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Mascot Card: Sahay waving -->
+      <div class="hero-mascot-card">
+        <div class="mascot-speech-bubble">
+          "Namaste! I'm Sahay, your hackathon helper bot. Got a great idea? Let's build it together!"
+        </div>
+        <div class="mascot-container" id="sahay-hero-container">
+          <!-- Dynamically mounted by mascot.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHORTLIST RESULTS ANNOUNCEMENT SECTION -->
+  <section class="container" id="shortlist-section">
+    <div class="shortlist-result-card" id="home-shortlist-banner">
+      <div class="shortlist-header-row">
+        <div>
+          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.4rem;">
+            <span class="shortlist-badge-declared" id="home-shortlist-badge">
+              <span class="hero-badge-pulse" style="width:7px; height:7px; background:#065F46;"></span>
+              Results Declared
+            </span>
+            <span style="font-size:0.85rem; color:#C7D2FE;">Grand Finale: October 15–16, 2026</span>
+          </div>
+          <h2 style="font-size:1.6rem; font-weight:800; letter-spacing:-0.01em; margin-bottom:0.25rem;">
+            Final Round Shortlisted Candidates Declared
+          </h2>
+          <p style="font-size:0.95rem; color:#E0E7FF; max-width:680px;">
+            The evaluation panel has finalized the shortlist for the Grand Finale on <strong>October 15–16, 2026</strong>. Candidates can download the official roster or view their team selection status below.
+          </p>
+        </div>
+
+        <div class="shortlist-actions-wrap">
+          <button type="button" class="btn btn-cta" id="btn-view-shortlist-modal" style="min-height:46px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            View Shortlisted Teams
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Step Journey -->
+  <section class="section" id="journey">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">Your 3-Step Journey</h2>
+        <p class="section-subtitle">We made the registration quick and effortless so you can focus on creativity, not paperwork.</p>
+        <div class="circuit-divider">
+          <span class="circuit-line"></span>
+          <span class="circuit-dot"></span>
+          <span class="circuit-line"></span>
+        </div>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-number">01</span>
+          <div class="step-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3 class="step-title">Share Your Idea</h3>
+          <p class="step-desc">Fill out a 5-minute form with 12 required answers. No finished code or prototype needed—just tell us what problem you noticed.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">02</span>
+          <div class="step-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6M8 11h6"/></svg>
+          </div>
+          <h3 class="step-title">We Review & Shortlist</h3>
+          <p class="step-desc">Faculty mentors and AI researchers evaluate submissions on novelty, community importance, and early feasibility to select top finalist teams.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-number">03</span>
+          <div class="step-icon-wrap">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="step-title">Final Hackathon Round</h3>
+          <p class="step-desc">Shortlisted teams participate in the final 2-day hackathon (<strong>October 15–16, 2026</strong>) with expert mentorship, computational support, and Best Innovation awards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thematic Tracks Showcase -->
+  <section class="section" id="tracks" style="background-color:#FFFFFF;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Focus Areas</span>
+        <h2 class="section-title">Thematic Hackathon Tracks</h2>
+        <p class="section-subtitle">Choose the area where you want to make an impact. Each track is tailored for real Indian challenges.</p>
+        <div class="circuit-divider">
+          <span class="circuit-line"></span>
+          <span class="circuit-dot"></span>
+          <span class="circuit-line"></span>
+        </div>
+      </div>
+
+      <div class="tracks-grid">
+        <!-- Track 1: Social Impact (Violet) -->
+        <div class="track-card track-social">
+          <div class="track-card-header">
+            <div class="track-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="track-badge">Social Impact</span>
+          </div>
+          <h3 class="track-title">AI for Social Impact</h3>
+          <p class="track-desc">Solutions addressing accessibility, regional education, citizen services, sanitation, and empowerment of underserved communities.</p>
+          <div class="track-example">
+            <strong>Example Idea:</strong>
+            Voice assistant in local languages helping village elders apply for pension schemes.
+          </div>
+        </div>
+
+        <!-- Track 2: Healthcare (Rose) -->
+        <div class="track-card track-health">
+          <div class="track-card-header">
+            <div class="track-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <span class="track-badge">Healthcare</span>
+          </div>
+          <h3 class="track-title">AI in Healthcare</h3>
+          <p class="track-desc">Early diagnostic aids for primary clinics, rural telemedicine support, assistive health devices, and maternal healthcare intelligence.</p>
+          <div class="track-example">
+            <strong>Example Idea:</strong>
+            Smartphone camera filter detecting early eye disorders in remote health camps.
+          </div>
+        </div>
+
+        <!-- Track 3: Agriculture (Mint) -->
+        <div class="track-card track-agri">
+          <div class="track-card-header">
+            <div class="track-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-10 10c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+            </div>
+            <span class="track-badge">Agriculture</span>
+          </div>
+          <h3 class="track-title">AI in Agriculture & Rural Dev</h3>
+          <p class="track-desc">Crop disease detection, soil moisture optimization, weather alerts, transparent mandi pricing, and pest mitigation tools.</p>
+          <div class="track-example">
+            <strong>Example Idea:</strong>
+            An offline app that scans crop leaf photos and guides farmers in Hindi or Marathi.
+          </div>
+        </div>
+
+        <!-- Track 4: Cyber & Defence (Indigo) -->
+        <div class="track-card track-cyber">
+          <div class="track-card-header">
+            <div class="track-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span class="track-badge">Cyber & Defence</span>
+          </div>
+          <h3 class="track-title">AI in Cyber Security & Defence</h3>
+          <p class="track-desc">Real-time threat analytics, digital identity protection, deepfake fraud prevention, and critical network infrastructure safeguards.</p>
+          <div class="track-example">
+            <strong>Example Idea:</strong>
+            Lightweight scanner alerting users when incoming audio calls use synthetic cloned voices.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eligibility & Inclusivity Guarantee Banner -->
+  <section class="section" id="eligibility">
+    <div class="container">
+      <div class="eligibility-box">
+        <div class="eligibility-mascot-icon" id="sahay-inclusivity-avatar">
+          <!-- Mascot mounted by JS -->
+        </div>
+
+        <div>
+          <h3 class="eligibility-title">Our Open Door Inclusivity Promise</h3>
+          <p style="color:var(--ink-muted); font-size:1.05rem;">
+            Innovation belongs to everyone. The hackathon is designed to be accessible to all students across India:
+          </p>
+
+          <ul class="eligibility-list">
+            <li class="eligibility-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Any academic branch (IT & Non-IT)</span>
+            </li>
+            <li class="eligibility-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Any recognized college or university</span>
+            </li>
+            <li class="eligibility-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>No prior code or prototype required</span>
+            </li>
+            <li class="eligibility-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>No GitHub or technical profile needed</span>
+            </li>
+            <li class="eligibility-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Zero registration fees</span>
+            </li>
+            <li class="eligibility-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Cross-college teams welcome</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Operational Timeline Banner -->
+      <div class="timeline-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <h3 style="font-size:1.4rem; font-weight:800;">Operational Event Roadmap</h3>
+            <p style="color:#C7D2FE; font-size:0.9rem;">Organized by Artificial Intelligence Learning Labs – Centre of Excellence</p>
+          </div>
+        </div>
+
+        <div class="timeline-grid">
+          <div class="timeline-step">
+            <div class="timeline-node">1</div>
+            <div class="timeline-step-title">Registration Open</div>
+            <div class="timeline-step-date">Until Oct 12, 11:59 PM</div>
+            <div class="timeline-step-note">5-step online form</div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-node">2</div>
+            <div class="timeline-step-title">Pre-Screening</div>
+            <div class="timeline-step-date">Oct 13 – Oct 14</div>
+            <div class="timeline-step-note">Faculty evaluation</div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-node">3</div>
+            <div class="timeline-step-title">Shortlist Announcement</div>
+            <div class="timeline-step-date">Oct 14, 2026</div>
+            <div class="timeline-step-note">Official roster published</div>
+          </div>
+          <div class="timeline-step active">
+            <div class="timeline-node">4</div>
+            <div class="timeline-step-title">Grand Finale</div>
+            <div class="timeline-step-date">October 15–16, 2026</div>
+            <div class="timeline-step-note">Final 2-Day Hackathon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section" style="text-align:center; padding-top:2rem;">
+    <div class="container">
+      <h2 style="font-size:2rem; font-weight:800; margin-bottom:1rem; color:var(--ink);">Got 5 minutes? Submit your AI idea now!</h2>
+      <p style="font-size:1.1rem; color:var(--ink-muted); margin-bottom:2rem; max-width:540px; margin-left:auto; margin-right:auto;">
+        Draft saved continuously on your phone so you will never lose your progress.
+      </p>
+      <a href="register.html" class="btn btn-cta">
+        Start 5-Minute Registration
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- SHORTLIST PREVIEW MODAL -->
+  <div class="modal-overlay" id="home-shortlist-modal">
+    <div class="modal-content" style="max-width: 880px;">
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-color); padding-bottom:1rem; margin-bottom:1rem;">
+        <div>
+          <span style="font-size:0.75rem; text-transform:uppercase; font-weight:800; color:var(--accent-mint);">Official Declaration</span>
+          <h2 style="font-size:1.4rem; font-weight:800; color:var(--ink);">Final Round Shortlisted Candidates (Oct 15–16)</h2>
+        </div>
+        <button type="button" class="btn-sm btn-secondary" id="btn-close-shortlist-modal" style="font-weight:700;">✕ Close</button>
+      </div>
+
+      <div id="modal-controls-row" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; margin-bottom:1rem;">
+        <input type="text" id="shortlist-search-input" class="form-input" placeholder="Search team, leader, college..." style="max-width:300px; font-size:0.875rem;">
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button type="button" class="btn btn-primary btn-sm" id="btn-modal-download-pdf">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Download Shortlist (PDF)
+          </button>
+          <button type="button" class="btn btn-secondary btn-sm" id="btn-modal-download-csv">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Export CSV
+          </button>
+        </div>
+      </div>
+
+      <div class="shortlist-modal-body" id="shortlist-modal-body-container">
+        <div class="table-responsive" id="shortlist-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Reg ID</th>
+                <th>Team / Applicant</th>
+                <th>College</th>
+                <th>Track</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="home-shortlist-table-body">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="brand-link" style="margin-bottom:0.75rem;">
+          <img src="assets/images/ai-hackathon-logo.jpg" alt="Nirmaan AI Hackathon 2026 Logo" class="brand-logo-img" style="width:38px; height:38px;">
+          <strong style="font-size:1.05rem;">Nirmaan AI Hackathon 2026</strong>
+        </div>
+        <p class="footer-brand-desc">
+          Nirmaan Organization – Centre of Excellence, Nagpur in partnership with Redington Foundation and Microsoft. National student AI innovation initiative.
+        </p>
+
+        <!-- Partner mini logos in footer -->
+        <div style="display:flex; gap:1rem; align-items:center; margin-top:1.25rem; flex-wrap:wrap;">
+          <img src="assets/images/redington-foundation.jpg" alt="Redington Foundation" style="height:28px; background:white; padding:2px 6px; border-radius:4px;">
+          <img src="assets/images/nirmaan-org.png" alt="Nirmaan.org" style="height:28px; background:white; padding:2px 6px; border-radius:4px;">
+          <img src="assets/images/microsoft.svg" alt="Microsoft" style="height:24px; background:white; padding:2px 6px; border-radius:4px;">
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="register.html">Register Now</a></li>
+          <li><a href="status.html">Track Submission Status</a></li>
+          <li><a href="#tracks">Thematic Tracks</a></li>
+          <li><a href="privacy.html">Privacy & Terms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Organizer Portal</h4>
+        <ul class="footer-links">
+          <li><a href="admin.html">Admin & Judge Login</a></li>
+          <li><a href="admin.html">Shortlist Declaration</a></li>
+          <li><a href="privacy.html#contact">Contact Organizers</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <span>© 2026 Nirmaan Organization – Centre of Excellence, Nagpur. Theme: AI in India – AI for India.</span>
+      <span>Final Round: October 15–16, 2026</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/mascot.js"></script>
+  <script src="js/network-canvas.js"></script>
+  <script src="js/api.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Initialize API & Data
+      HackathonAPI.init();
+
+      // 2. Mount Neural Network Canvas
+      new NeuralNetworkAnimation('neural-network-canvas');
+
+      // 3. Mount Sahay Robot Mascot
+      SahayMascot.mount('#sahay-hero-container', 'waving', 180);
+      SahayMascot.mount('#sahay-inclusivity-avatar', 'thinking', 85);
+
+      // 4. Handle Shortlist Banner State
+      const isDeclared = HackathonAPI.isShortlistDeclared();
+      const banner = document.getElementById('home-shortlist-banner');
+      const badge = document.getElementById('home-shortlist-badge');
+
+      if (!isDeclared) {
+        badge.className = 'shortlist-badge-pending';
+        badge.innerHTML = 'Evaluation in Progress';
+        banner.querySelector('h2').textContent = 'Final Round Shortlist Declaration';
+        banner.querySelector('p').innerHTML = 'The faculty evaluation panel is actively assessing all submissions. Shortlisted candidates for the <strong>October 15–16, 2026</strong> Final Round will be published here once officially declared.';
+      }
+
+      // View Shortlist Modal
+      const modal = document.getElementById('home-shortlist-modal');
+      const tableBody = document.getElementById('home-shortlist-table-body');
+      const tableWrap = document.getElementById('shortlist-table-wrap');
+      const modalControls = document.getElementById('modal-controls-row');
+      const modalBodyContainer = document.getElementById('shortlist-modal-body-container');
+      const searchInput = document.getElementById('shortlist-search-input');
+
+      // PDF and CSV Download handlers
+      document.getElementById('btn-modal-download-pdf')?.addEventListener('click', () => {
+        HackathonAPI.downloadShortlistPDF();
+      });
+
+      document.getElementById('btn-modal-download-csv')?.addEventListener('click', () => {
+        HackathonAPI.downloadShortlistCSV();
+      });
+
+      function renderModalContent(filter = '') {
+        const declared = HackathonAPI.isShortlistDeclared();
+        
+        if (!declared) {
+          // Hide table & controls, show clean pending UI popup
+          if (modalControls) modalControls.style.display = 'none';
+          if (tableWrap) tableWrap.style.display = 'none';
+          
+          let pendingBox = document.getElementById('shortlist-pending-state-box');
+          if (!pendingBox) {
+            pendingBox = document.createElement('div');
+            pendingBox.id = 'shortlist-pending-state-box';
+            pendingBox.className = 'pending-result-card';
+            modalBodyContainer.appendChild(pendingBox);
+          }
+          pendingBox.style.display = 'block';
+          pendingBox.innerHTML = `
+            <div class="pending-result-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="pending-result-title">Shortlist Results Not Yet Declared</h3>
+            <p class="pending-result-desc">
+              The faculty evaluation committee and technical mentors are currently reviewing all submitted project proposals against the 60-point rubric.
+            </p>
+            <div style="display:inline-flex; align-items:center; gap:0.5rem; background:rgba(251,191,36,0.15); border:1px solid #FBBF24; color:#92400E; padding:0.6rem 1.25rem; border-radius:9999px; font-weight:700; font-size:0.875rem; margin-bottom:1.5rem;">
+              <span>Please check back shortly • Grand Finale: October 15–16, 2026</span>
+            </div>
+            <div>
+              <a href="status.html" class="btn btn-primary btn-sm" style="display:inline-flex;">
+                Track Your Individual Submission Status →
+              </a>
+            </div>
+          `;
+          return;
+        }
+
+        // Declared State: Show table & controls, remove pending box
+        if (modalControls) modalControls.style.display = 'flex';
+        if (tableWrap) tableWrap.style.display = 'block';
+        const pendingBox = document.getElementById('shortlist-pending-state-box');
+        if (pendingBox) pendingBox.style.display = 'none';
+
+        const res = HackathonAPI.getPublicShortlistedSubmissions();
+        const list = res.items || [];
+        const cleanFilter = filter.toLowerCase().trim();
+        const filtered = list.filter(s => 
+          !cleanFilter ||
+          s.registrationId.toLowerCase().includes(cleanFilter) ||
+          s.fullName.toLowerCase().includes(cleanFilter) ||
+          (s.teamName && s.teamName.toLowerCase().includes(cleanFilter)) ||
+          s.collegeName.toLowerCase().includes(cleanFilter) ||
+          (s.problemTitle && s.problemTitle.toLowerCase().includes(cleanFilter))
+        );
+
+        if (filtered.length === 0) {
+          tableBody.innerHTML = '<tr><td colspan="5" style="text-align:center; padding:2rem; color:var(--ink-light);">No matching shortlisted candidates found.</td></tr>';
+          return;
+        }
+
+        tableBody.innerHTML = filtered.map(s => `
+          <tr>
+            <td><strong style="font-family:monospace; color:var(--primary); font-size:0.875rem;">${s.registrationId}</strong></td>
+            <td>
+              <div style="font-weight:700; color:var(--ink); font-size:0.9rem;">${s.participationType === 'team' ? s.teamName : s.fullName}</div>
+              <div style="font-size:0.775rem; color:var(--ink-muted);">${s.fullName} (${s.participationType === 'team' ? 'Team' : 'Solo'})</div>
+            </td>
+            <td>
+              <div style="font-size:0.85rem; font-weight:600;">${s.collegeName}</div>
+              <div style="font-size:0.75rem; color:var(--ink-light);">${s.department}</div>
+            </td>
+            <td>
+              <span class="track-badge" style="background:var(--primary-light); color:var(--primary); font-size:0.75rem;">${s.trackBadge || s.trackName}</span>
+            </td>
+            <td>
+              <span class="status-chip shortlisted" style="font-size:0.75rem;">Finalist Confirmed</span>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      document.getElementById('btn-view-shortlist-modal')?.addEventListener('click', () => {
+        renderModalContent();
+        modal.classList.add('open');
+      });
+
+      document.getElementById('btn-close-shortlist-modal')?.addEventListener('click', () => {
+        modal.classList.remove('open');
+      });
+
+      searchInput?.addEventListener('input', (e) => {
+        renderModalContent(e.target.value);
+      });
+    });
+  </script>
+</body>
+</html>

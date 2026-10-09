@@ -1,0 +1,24 @@
+# Node & Package Managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Secret & Environment Configs
+js/config.js
+.env
+.env.local
+.env.*.local
+
+# Deployment & Temporary Archives
+dist/
+*.zip
+nirmaan-ai-hackathon-2026-build/
+nirmaan-ai-hackathon-2026-build.zip
+
+# OS & Editor generated files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

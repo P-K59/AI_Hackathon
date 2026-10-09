@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration | Nirmaan AI Hackathon 2026 (Nagpur)</title>
+  <meta name="description" content="5-minute registration for Nirmaan AI Hackathon 2026 – Centre of Excellence, Nagpur. Supported by Redington Foundation & Microsoft.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--bg-cloud);">
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/images/ai-hackathon-logo.jpg" alt="Nirmaan AI Hackathon 2026 Logo" class="brand-logo-img">
+        <div class="brand-text-wrap">
+          <span class="brand-title">Nirmaan AI Hackathon 2026</span>
+          <span class="brand-subtitle">Centre of Excellence • Nagpur</span>
+        </div>
+      </a>
+
+      <div style="display:flex; align-items:center; gap:1.25rem;">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <img src="assets/images/redington-foundation.jpg" alt="Redington" style="height:20px;">
+          <img src="assets/images/nirmaan-org.png" alt="Nirmaan" style="height:20px;">
+          <img src="assets/images/microsoft.svg" alt="Microsoft" style="height:16px;">
+        </div>
+        <a href="index.html" class="nav-link" style="font-size:0.9rem;">← Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Circuit Progress Bar -->
+  <div class="form-header-wrap">
+    <div class="progress-circuit-wrap">
+      <div class="progress-meta-row">
+        <span class="progress-step-text" id="progress-step-text">Step 1 of 5</span>
+        <span class="progress-time-estimate" id="progress-time-text">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          about 5 minutes left
+        </span>
+      </div>
+
+      <div class="circuit-progress-bar">
+        <div class="circuit-track-line"></div>
+        <div class="circuit-track-filled" id="circuit-track-filled" style="width: 0%;"></div>
+
+        <div class="circuit-node active" data-step="1" data-label="About You">1<span class="circuit-node-label">About You</span></div>
+        <div class="circuit-node" data-step="2" data-label="College">2<span class="circuit-node-label">College</span></div>
+        <div class="circuit-node" data-step="3" data-label="Team">3<span class="circuit-node-label">Team</span></div>
+        <div class="circuit-node" data-step="4" data-label="Your Idea">4<span class="circuit-node-label">Your Idea</span></div>
+        <div class="circuit-node" data-step="5" data-label="Review">5<span class="circuit-node-label">Review</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form Page Main Area -->
+  <main class="form-page-container">
+
+    <!-- Sahay Guide Tip Box (Contextual per step) -->
+    <div class="sahay-form-tip" id="sahay-form-tip-box">
+      <!-- Injected by form.js -->
+    </div>
+
+    <form id="hackathon-form" novalidate>
+
+      <!-- ================= STEP 1: ABOUT YOU ================= -->
+      <section class="form-step-card active-step" id="step-card-1">
+        <div class="step-card-header">
+          <span class="step-badge">Step 1 of 5</span>
+          <h2 class="step-heading">About You</h2>
+          <p class="step-subheading">Tell us who you are so the organizing committee can reach you with updates.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="field-fullname" class="form-label">Full Name <span class="required-star">*</span></label>
+          <input type="text" id="field-fullname" name="fullName" class="form-input" placeholder="e.g. Sarthak Sharma" autocomplete="name" required>
+          <div class="field-error-msg" id="field-fullname-error"></div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="field-email" class="form-label">Email Address <span class="required-star">*</span></label>
+            <span class="form-example">We will send your registration pass and updates here.</span>
+            <input type="email" id="field-email" name="email" class="form-input" placeholder="your.name@college.edu or gmail.com" autocomplete="email" required>
+            <div class="field-error-msg" id="field-email-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="field-mobile" class="form-label">Mobile Number <span class="required-star">*</span></label>
+            <span class="form-example">10-digit phone number for WhatsApp and SMS alerts.</span>
+            <input type="tel" id="field-mobile" name="mobile" class="form-input" placeholder="e.g. 9876543210" maxlength="10" autocomplete="tel" required>
+            <div class="field-error-msg" id="field-mobile-error"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <label for="field-whatsapp" class="form-label">WhatsApp Number <span class="optional-tag">(Optional)</span></label>
+            <button type="button" class="btn btn-sm btn-outline" id="btn-same-whatsapp" style="font-size:0.75rem; padding:2px 8px; min-height:28px;">
+              Same as Mobile
+            </button>
+          </div>
+          <input type="tel" id="field-whatsapp" name="whatsapp" class="form-input" placeholder="10-digit number if different from mobile">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="field-city" class="form-label">City or Town <span class="required-star">*</span></label>
+            <input type="text" id="field-city" name="city" class="form-input" placeholder="e.g. Pune or Bhopal" required>
+            <div class="field-error-msg" id="field-city-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="field-state" class="form-label">State / UT <span class="required-star">*</span></label>
+            <input type="text" id="field-state" name="state" class="form-input" placeholder="e.g. Maharashtra" required>
+            <div class="field-error-msg" id="field-state-error"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="field-roll" class="form-label">College Roll / Student ID <span class="optional-tag">(Optional)</span></label>
+            <input type="text" id="field-roll" name="rollNumber" class="form-input" placeholder="e.g. 2022-CS-108">
+          </div>
+
+          <div class="form-group">
+            <label for="field-gender" class="form-label">Gender <span class="optional-tag">(Optional)</span></label>
+            <select id="field-gender" name="gender" class="form-select">
+              <option value="Prefer not to say">Prefer not to say</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Non-binary / Other">Non-binary / Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="field-linkedin" class="form-label">LinkedIn Profile <span class="optional-tag">(Optional)</span></label>
+            <input type="url" id="field-linkedin" name="linkedin" class="form-input" placeholder="https://linkedin.com/in/username">
+          </div>
+
+          <div class="form-group">
+            <label for="field-github" class="form-label">GitHub Profile <span class="optional-tag">(Optional)</span></label>
+            <input type="url" id="field-github" name="github" class="form-input" placeholder="https://github.com/username">
+          </div>
+        </div>
+
+        <div style="background:#F1F5F9; border-radius:var(--radius-sm); padding:0.75rem 1rem; font-size:0.8rem; color:var(--ink-light);">
+          🔒 <strong>Privacy Note:</strong> We do not ask for Aadhaar or any government ID numbers. Your information is strictly used for hackathon coordination.
+        </div>
+      </section>
+
+      <!-- ================= STEP 2: YOUR COLLEGE ================= -->
+      <section class="form-step-card" id="step-card-2">
+        <div class="step-card-header">
+          <span class="step-badge">Step 2 of 5</span>
+          <h2 class="step-heading">Your College & Branch</h2>
+          <p class="step-subheading">Students from all branches and institutions across India are welcome.</p>
+        </div>
+
+        <div class="form-group" id="group-college-status">
+          <label class="form-label">Is your college in our list? <span class="required-star">*</span></label>
+          <div class="pill-group">
+            <label class="pill-option">
+              <input type="radio" name="collegeStatus" value="Yes" checked>
+              <span class="pill-label">Yes, search list</span>
+            </label>
+            <label class="pill-option">
+              <input type="radio" name="collegeStatus" value="No">
+              <span class="pill-label">No, enter name</span>
+            </label>
+            <label class="pill-option">
+              <input type="radio" name="collegeStatus" value="Not sure">
+              <span class="pill-label">Not sure</span>
+            </label>
+          </div>
+          <div class="field-error-msg" id="group-college-status-error"></div>
+        </div>
+
+        <!-- If Yes: Searchable Autocomplete -->
+        <div class="form-group autocomplete-wrap" id="college-search-group">
+          <label for="field-college-search" class="form-label">Search College Name <span class="required-star">*</span></label>
+          <span class="form-example">Type any letters to filter top institutions across India.</span>
+          <input type="text" id="field-college-search" class="form-input" placeholder="e.g. IIT, NIT, COEP, BITS, SRM..." autocomplete="off">
+          <input type="hidden" id="field-selected-college" name="selectedCollege">
+          <div class="autocomplete-dropdown" id="college-autocomplete-list"></div>
+          <div class="field-error-msg" id="field-college-search-error"></div>
+        </div>
+
+        <!-- If No or Not Sure: Custom Inputs -->
+        <div id="college-custom-group" style="display:none;">
+          <div class="form-group">
+            <label for="field-custom-college" class="form-label">College / University Name <span class="required-star">*</span></label>
+            <input type="text" id="field-custom-college" name="customCollegeName" class="form-input" placeholder="e.g. Government Engineering College, Aurangabad">
+            <div class="field-error-msg" id="field-custom-college-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="field-custom-city" class="form-label">College City / Location</label>
+            <input type="text" id="field-custom-city" name="collegeCity" class="form-input" placeholder="e.g. Aurangabad, Maharashtra">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="field-department" class="form-label">Department / Branch <span class="required-star">*</span></label>
+            <select id="field-department" name="department" class="form-select" required>
+              <option value="">Select your department</option>
+              <!-- Populated by form.js from settings + "Other" -->
+            </select>
+            <div class="field-error-msg" id="field-department-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="field-year" class="form-label">Year of Study <span class="required-star">*</span></label>
+            <select id="field-year" name="yearOfStudy" class="form-select" required>
+              <option value="">Select year of study</option>
+              <!-- Populated by form.js from settings -->
+            </select>
+            <div class="field-error-msg" id="field-year-error"></div>
+          </div>
+        </div>
+
+        <!-- Department Other text input -->
+        <div class="form-group" id="department-other-wrap" style="display:none;">
+          <label for="field-department-other" class="form-label">Specify Your Department <span class="required-star">*</span></label>
+          <input type="text" id="field-department-other" name="departmentOther" class="form-input" placeholder="e.g. Agricultural Engineering, Chemistry, Economics">
+          <div class="field-error-msg" id="field-department-other-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="field-degree" class="form-label">Degree or Course <span class="optional-tag">(Optional)</span></label>
+          <input type="text" id="field-degree" name="degreeCourse" class="form-input" placeholder="e.g. B.Tech, B.E., B.Sc, BCA, M.Tech, MCA">
+        </div>
+
+        <div class="form-group">
+          <label for="field-faculty-name" class="form-label">Faculty Coordinator / Mentor Name <span class="optional-tag">(Optional)</span></label>
+          <input type="text" id="field-faculty-name" name="facultyName" class="form-input" placeholder="e.g. Prof. R. Sharma">
+        </div>
+      </section>
+
+      <!-- ================= STEP 3: JUST YOU OR A TEAM? ================= -->
+      <section class="form-step-card" id="step-card-3">
+        <div class="step-card-header">
+          <span class="step-badge">Step 3 of 5</span>
+          <h2 class="step-heading">Just You, or a Team?</h2>
+          <p class="step-subheading">You can register as an individual or bring a team of students.</p>
+        </div>
+
+        <div class="form-group" id="group-part-type">
+          <label class="form-label">How are you participating? <span class="required-star">*</span></label>
+          <div class="pill-group">
+            <label class="pill-option">
+              <input type="radio" name="participationType" value="single" checked>
+              <span class="pill-label">Just me (Solo)</span>
+            </label>
+            <label class="pill-option">
+              <input type="radio" name="participationType" value="team">
+              <span class="pill-label">My team (3 to 6 members)</span>
+            </label>
+          </div>
+          <div class="field-error-msg" id="group-part-type-error"></div>
+        </div>
+
+        <!-- Team Details Section -->
+        <div id="team-details-wrap" style="display:none;">
+          <div class="form-group">
+            <label for="field-team-name" class="form-label">Team Name <span class="required-star">*</span></label>
+            <input type="text" id="field-team-name" name="teamName" class="form-input" placeholder="e.g. Neural Pioneers, AgriTech Bharat">
+            <div class="field-error-msg" id="field-team-name-error"></div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Team Leader</label>
+            <input type="text" id="field-team-leader" class="form-input" readonly style="background:#F1F5F9; color:var(--ink-muted); font-weight:600;" value="Auto-filled from Step 1">
+            <span class="form-example">As the registrant, you are the primary point of contact and team leader.</span>
+          </div>
+
+          <div class="form-group">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+              <label class="form-label" style="margin-bottom:0;">Teammates</label>
+              <span style="font-size:0.8rem; color:var(--ink-light);">Cross-college teammates are welcome!</span>
+            </div>
+
+            <!-- Dynamic Teammates Container -->
+            <div id="teammates-list-container">
+              <!-- Teammate cards rendered dynamically by form.js -->
+            </div>
+
+            <button type="button" class="btn-add-teammate" id="btn-add-teammate">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              + Add Teammate
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= STEP 4: YOUR IDEA ================= -->
+      <section class="form-step-card" id="step-card-4">
+        <div class="step-card-header">
+          <span class="step-badge">Step 4 of 5</span>
+          <h2 class="step-heading">Your Idea</h2>
+          <p class="step-subheading">Tell us what real problem you noticed and how AI could help solve it.</p>
+        </div>
+
+        <div class="form-group">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <label for="field-problem-title" class="form-label">Problem Title <span class="required-star">*</span></label>
+            <span class="word-count-badge" id="title-word-count">0 / 10 words</span>
+          </div>
+          <span class="form-example">A clear headline (max 10 words). Example: Early detection of pink bollworm in Vidarbha cotton farms.</span>
+          <input type="text" id="field-problem-title" name="problemTitle" class="form-input" placeholder="e.g. AI-powered water leakage detector in rural pipelines" required>
+          <div class="field-error-msg" id="field-problem-title-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Which thematic area fits best? <span class="required-star">*</span></label>
+          <span class="form-example">Choose the track that closest aligns with your idea.</span>
+          <div class="track-selection-grid" id="tracks-selection-container">
+            <!-- Populated dynamically with track styles from settings by form.js -->
+          </div>
+          <div class="field-error-msg" id="tracks-selection-container-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="field-problem-desc" class="form-label">What is the problem and who faces it? <span class="required-star">*</span></label>
+          <span class="form-example">What problem did you notice? Who faces it, and where? Example: Farmers in my village do not know when their crops may get diseases, leading to sudden yield loss.</span>
+          <textarea id="field-problem-desc" name="problemDesc" class="form-textarea" placeholder="Describe the ground problem in your own words..." required></textarea>
+          <div class="field-error-msg" id="field-problem-desc-error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="field-ai-solution" class="form-label">How do you think AI could help? <span class="required-star">*</span></label>
+          <span class="form-example">Explain in your own words. Example: An app that looks at a leaf photo and tells the farmer what is wrong in their native language.</span>
+          <textarea id="field-ai-solution" name="aiSolution" class="form-textarea" placeholder="Explain your concept in plain words..." required></textarea>
+          <div class="field-error-msg" id="field-ai-solution-error"></div>
+        </div>
+
+        <!-- Optional Enrichments -->
+        <div style="background:#F8FAFC; border:1px solid #E2E8F0; border-radius:var(--radius-md); padding:1.25rem; margin-top:1.5rem;">
+          <h4 style="font-size:0.95rem; font-weight:700; margin-bottom:0.75rem; color:var(--ink);">Additional Details <span class="optional-tag">(All optional - answer only if you want)</span></h4>
+
+          <div class="form-group">
+            <label for="field-problem-origin" class="form-label" style="font-size:0.875rem;">Where did you notice this problem?</label>
+            <input type="text" id="field-problem-origin" name="problemOrigin" class="form-input" placeholder="e.g. During a visit to my grandparent's farm, or at a local health clinic">
+          </div>
+
+          <div class="form-group">
+            <label for="field-why-matters" class="form-label" style="font-size:0.875rem;">Why does this matter most for India?</label>
+            <input type="text" id="field-why-matters" name="whyItMatters" class="form-input" placeholder="e.g. Over 60% of rural livelihoods depend on timely harvest">
+          </div>
+
+          <div class="form-group">
+            <label for="field-current-alt" class="form-label" style="font-size:0.875rem;">What exists today?</label>
+            <input type="text" id="field-current-alt" name="currentAlternatives" class="form-input" placeholder="e.g. Manual inspection or expensive lab tests that take weeks">
+          </div>
+
+          <div class="form-group">
+            <label for="field-expected-outcome" class="form-label" style="font-size:0.875rem;">Expected outcome if this is built?</label>
+            <input type="text" id="field-expected-outcome" name="expectedOutcome" class="form-input" placeholder="e.g. Helps farmers save at least 25% of crops before spread">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="field-stage" class="form-label" style="font-size:0.875rem;">How far have you got?</label>
+              <select id="field-stage" name="progressStage" class="form-select">
+                <option value="Idea stage only">Idea stage only</option>
+                <option value="Initial research & rough sketches">Initial research & rough sketches</option>
+                <option value="Proof of concept or wireframes">Proof of concept or wireframes</option>
+                <option value="Working prototype (partial or complete)">Working prototype (partial or complete)</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <label for="field-tools" class="form-label" style="font-size:0.875rem;">Tools you may use</label>
+                <button type="button" class="btn btn-sm btn-outline" id="btn-tools-not-sure" style="font-size:0.75rem; padding:2px 8px; min-height:28px;">
+                  Not sure yet
+                </button>
+              </div>
+              <input type="text" id="field-tools" name="toolsPlanned" class="form-input" placeholder="e.g. Python, OpenCV, TensorFlow, or 'Not sure yet'">
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:0;">
+            <label for="field-project-links" class="form-label" style="font-size:0.875rem;">Links to project, video or code <span class="optional-tag">(Optional)</span></label>
+            <input type="url" id="field-project-links" name="projectLinks" class="form-input" placeholder="https://github.com/... or Google Drive / YouTube demo link">
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= STEP 5: REVIEW AND SEND ================= -->
+      <section class="form-step-card" id="step-card-5">
+        <div class="step-card-header">
+          <span class="step-badge">Step 5 of 5</span>
+          <h2 class="step-heading">Review & Send</h2>
+          <p class="step-subheading">Review your answers below. You can tap 'Edit' on any section to make quick adjustments.</p>
+        </div>
+
+        <!-- Section 1 Summary -->
+        <div class="review-section-box">
+          <div class="review-section-header">
+            <span class="review-section-title">1. About You</span>
+            <button type="button" class="btn-edit-step" data-target-step="1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              Edit
+            </button>
+          </div>
+          <div class="review-data-grid">
+            <div class="review-data-item">
+              <div class="review-data-label">Full Name</div>
+              <div class="review-data-value" id="rev-name">—</div>
+            </div>
+            <div class="review-data-item">
+              <div class="review-data-label">Email</div>
+              <div class="review-data-value" id="rev-email">—</div>
+            </div>
+            <div class="review-data-item">
+              <div class="review-data-label">Mobile</div>
+              <div class="review-data-value" id="rev-mobile">—</div>
+            </div>
+            <div class="review-data-item">
+              <div class="review-data-label">Location</div>
+              <div class="review-data-value" id="rev-location">—</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2 Summary -->
+        <div class="review-section-box">
+          <div class="review-section-header">
+            <span class="review-section-title">2. College & Department</span>
+            <button type="button" class="btn-edit-step" data-target-step="2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              Edit
+            </button>
+          </div>
+          <div class="review-data-grid">
+            <div class="review-data-item full-width">
+              <div class="review-data-label">College</div>
+              <div class="review-data-value" id="rev-college">—</div>
+            </div>
+            <div class="review-data-item">
+              <div class="review-data-label">Department</div>
+              <div class="review-data-value" id="rev-dept">—</div>
+            </div>
+            <div class="review-data-item">
+              <div class="review-data-label">Year of Study</div>
+              <div class="review-data-value" id="rev-year">—</div>
+            </div>
+            <div class="review-data-item">
+              <div class="review-data-label">Mentor / Faculty</div>
+              <div class="review-data-value" id="rev-mentor">—</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 Summary -->
+        <div class="review-section-box">
+          <div class="review-section-header">
+            <span class="review-section-title">3. Team Details</span>
+            <button type="button" class="btn-edit-step" data-target-step="3">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              Edit
+            </button>
+          </div>
+          <div class="review-data-grid">
+            <div class="review-data-item">
+              <div class="review-data-label">Format</div>
+              <div class="review-data-value" id="rev-part-type">—</div>
+            </div>
+            <div class="review-data-item">
+              <div class="review-data-label">Teammates</div>
+              <div class="review-data-value" id="rev-teammates">—</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4 Summary -->
+        <div class="review-section-box">
+          <div class="review-section-header">
+            <span class="review-section-title">4. Your Idea</span>
+            <button type="button" class="btn-edit-step" data-target-step="4">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              Edit
+            </button>
+          </div>
+          <div class="review-data-grid">
+            <div class="review-data-item full-width">
+              <div class="review-data-label">Problem Title</div>
+              <div class="review-data-value" id="rev-title">—</div>
+            </div>
+            <div class="review-data-item full-width">
+              <div class="review-data-label">Thematic Track</div>
+              <div class="review-data-value" id="rev-track">—</div>
+            </div>
+            <div class="review-data-item full-width">
+              <div class="review-data-label">The Problem</div>
+              <div class="review-data-value" id="rev-problem">—</div>
+            </div>
+            <div class="review-data-item full-width">
+              <div class="review-data-label">AI Approach</div>
+              <div class="review-data-value" id="rev-solution">—</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Declarations & Undertaking -->
+        <div id="declarations-container" style="margin-top:1.75rem;">
+          <h4 style="font-size:1.05rem; font-weight:800; margin-bottom:0.75rem; color:var(--ink);">Student Declarations</h4>
+
+          <label class="checkbox-card">
+            <input type="checkbox" id="decl-correct" name="declCorrect" required>
+            <span class="checkbox-text">
+              <strong>All submitted details are true and correct</strong> to the best of my knowledge. <span class="required-star">*</span>
+            </span>
+          </label>
+
+          <label class="checkbox-card">
+            <input type="checkbox" id="decl-terms" name="declTerms" required>
+            <span class="checkbox-text">
+              I accept the <a href="privacy.html" target="_blank">Participation Terms and Privacy Notice</a>. <span class="required-star">*</span>
+            </span>
+          </label>
+
+          <label class="checkbox-card">
+            <input type="checkbox" id="decl-no-guarantee" name="declNoGuarantee" required>
+            <span class="checkbox-text">
+              I understand that <strong>registration does not guarantee selection</strong> for the final round hackathon. The organizing team will review all entries against the official rubric. <span class="required-star">*</span>
+            </span>
+          </label>
+
+          <label class="checkbox-card" style="background:#F8FAFC;">
+            <input type="checkbox" id="decl-photo" name="publicityConsent">
+            <span class="checkbox-text" style="color:var(--ink-muted);">
+              <strong>Optional Publicity Consent:</strong> I agree that my project name and presentation photographs may be featured in AI Learning Labs press releases and CoE annual showcases.
+            </span>
+          </label>
+
+          <div class="field-error-msg" id="declarations-container-error"></div>
+        </div>
+      </section>
+
+    </form>
+  </main>
+
+  <!-- Sticky Bottom Navigation Bar with Autosave -->
+  <footer class="form-sticky-footer">
+    <div class="sticky-footer-inner">
+      <div class="autosave-indicator" id="autosave-status">
+        <span class="autosave-dot"></span>
+        <span>Saved on this phone</span>
+      </div>
+
+      <div class="footer-nav-buttons">
+        <button type="button" class="btn btn-secondary" id="btn-prev" style="display:none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          Back
+        </button>
+
+        <button type="button" class="btn btn-primary" id="btn-next">
+          Next
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <button type="button" class="btn btn-cta" id="btn-submit" style="display:none; font-size:1rem; padding:0.75rem 1.75rem;">
+          Submit Registration
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/mascot.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Confirmed | Nirmaan AI Hackathon 2026 (Nagpur)</title>
+  <meta name="description" content="Registration ticket confirmation for Nirmaan AI Hackathon 2026 – Centre of Excellence, Nagpur.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @media print {
+      .site-header, .site-footer, .ticket-actions-row, .no-print {
+        display: none !important;
+      }
+      body {
+        background: white !important;
+      }
+      .ticket-card {
+        box-shadow: none !important;
+        border: 2px solid #000 !important;
+      }
+    }
+  </style>
+</head>
+<body style="background-color: var(--bg-cloud);">
+
+  <!-- Site Header -->
+  <header class="site-header no-print">
+    <div class="header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/images/ai-hackathon-logo.jpg" alt="Nirmaan AI Hackathon 2026 Logo" class="brand-logo-img">
+        <div class="brand-text-wrap">
+          <span class="brand-title">Nirmaan AI Hackathon 2026</span>
+          <span class="brand-subtitle">Centre of Excellence • Nagpur</span>
+        </div>
+      </a>
+      <div style="display:flex; align-items:center; gap:1.25rem;">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <img src="assets/images/redington-foundation.jpg" alt="Redington" style="height:20px;">
+          <img src="assets/images/nirmaan-org.png" alt="Nirmaan" style="height:20px;">
+          <img src="assets/images/microsoft.svg" alt="Microsoft" style="height:16px;">
+        </div>
+        <a href="index.html" class="nav-link" style="font-size:0.9rem;">Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+    <!-- Celebration Mascot & Header -->
+    <div style="text-align:center; max-width:540px; margin:0 auto 1.5rem;">
+      <div id="sahay-celebrate-avatar" style="width:160px; height:160px; margin:0 auto 0.5rem;"></div>
+      <h1 style="font-size:2rem; font-weight:800; color:var(--ink); margin-bottom:0.4rem;">Registration Confirmed</h1>
+      <p style="color:var(--ink-muted); font-size:1.05rem;">
+        Your submission has been securely confirmed by the server and logged in the evaluation registry.
+      </p>
+    </div>
+
+    <!-- Ticket-style Card -->
+    <div class="ticket-wrapper">
+      <div class="ticket-card" id="printable-ticket">
+        
+        <!-- Header -->
+        <div class="ticket-header">
+          <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.06em; font-weight:700; opacity:0.9;">
+            Nirmaan Organization • Centre of Excellence, Nagpur
+          </span>
+          <h2 style="font-size:1.4rem; font-weight:800; margin:0.4rem 0 0.2rem;">Nirmaan AI Hackathon 2026</h2>
+          <div style="font-size:0.85rem; opacity:0.9;">Official Final Round Entry Ticket • Oct 15–16</div>
+
+          <div class="ticket-id-badge" id="ticket-reg-id">
+            AIHACK-2026-....
+          </div>
+        </div>
+
+        <!-- Cutout Row -->
+        <div class="ticket-cutout-row">
+          <div class="ticket-cutout-left"></div>
+          <div class="ticket-dashed-line"></div>
+          <div class="ticket-cutout-right"></div>
+        </div>
+
+        <!-- Body -->
+        <div class="ticket-body">
+          <div class="ticket-info-row">
+            <span style="color:var(--ink-light); font-weight:600;">Participant / Leader</span>
+            <strong id="ticket-fullname" style="color:var(--ink); text-align:right;">—</strong>
+          </div>
+
+          <div class="ticket-info-row">
+            <span style="color:var(--ink-light); font-weight:600;">Participation Type</span>
+            <strong id="ticket-type" style="color:var(--ink); text-align:right;">Solo</strong>
+          </div>
+
+          <div class="ticket-info-row">
+            <span style="color:var(--ink-light); font-weight:600;">College / Institute</span>
+            <strong id="ticket-college" style="color:var(--ink); text-align:right; max-width:60%;">—</strong>
+          </div>
+
+          <div class="ticket-info-row">
+            <span style="color:var(--ink-light); font-weight:600;">Thematic Track</span>
+            <strong id="ticket-track" style="color:var(--primary); text-align:right;">—</strong>
+          </div>
+
+          <div class="ticket-info-row">
+            <span style="color:var(--ink-light); font-weight:600;">Problem Title</span>
+            <strong id="ticket-title" style="color:var(--ink); text-align:right; max-width:60%;">—</strong>
+          </div>
+
+          <div class="ticket-info-row">
+            <span style="color:var(--ink-light); font-weight:600;">Submitted On</span>
+            <span id="ticket-timestamp" style="color:var(--ink-muted); text-align:right;">—</span>
+          </div>
+
+          <!-- Official Mandatory Received Message -->
+          <div class="ticket-disclaimer-box">
+            <div style="font-weight:700; margin-bottom:0.25rem;">Official Status Notice:</div>
+            "Your registration has been received. The organizing team will review submissions as announced. Registration does not guarantee selection for the final hackathon."
+          </div>
+
+          <!-- Official WhatsApp Group Invitation Box -->
+          <div style="background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%); border: 1.5px solid #10B981; border-radius: var(--radius-md); padding: 1.25rem; margin-top: 1.25rem; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#16A34A"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zM12.05 20.2c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.218 8.218 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.65 4.2 3.71.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.47-.31z"/></svg>
+              <strong style="color: #065F46; font-size: 1rem;">Join Official Hackathon WhatsApp Group</strong>
+            </div>
+            <p style="font-size: 0.875rem; color: #047857; margin-bottom: 0.85rem;">
+              Get instant live updates, mentoring schedules, and Grand Finale announcements directly from the committee.
+            </p>
+            <a href="https://chat.whatsapp.com/HpNigtbhEPr5BZUJC64R7g?s=qt&p=a&mlu=4&ilr=4" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #16A34A; border-color: #15803D; color: #FFFFFF; font-weight: 700; width: 100%; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none;">
+              <span>Join WhatsApp Community →</span>
+            </a>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="ticket-actions-row no-print" style="margin-top: 1.25rem;">
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-copy-id" style="flex:1;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy Reg ID
+            </button>
+
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-print" style="flex:1;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Print Ticket
+            </button>
+
+            <a href="status.html" class="btn btn-primary btn-sm" id="btn-track-status" style="flex:1; text-decoration:none;">
+              Track Status
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/mascot.js"></script>
+  <script src="js/api.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Mount celebrating Sahay mascot
+      SahayMascot.mount('#sahay-celebrate-avatar', 'celebrating', 160);
+
+      // Extract Registration ID from URL parameter
+      const params = new URLSearchParams(window.location.search);
+      const regId = params.get('id');
+
+      // Attempt to load latest ticket from sessionStorage or API
+      let ticket = null;
+      const cached = sessionStorage.getItem('aihack_latest_ticket');
+      if (cached) {
+        ticket = JSON.parse(cached);
+      }
+
+      if (regId) {
+        const subs = HackathonAPI.getAllSubmissions();
+        const found = subs.find(s => s.registrationId === regId);
+        if (found) {
+          ticket = {
+            registrationId: found.registrationId,
+            fullName: found.fullName,
+            college: found.collegeName,
+            participationType: found.participationType,
+            teamName: found.teamName,
+            problemTitle: found.problemTitle,
+            trackName: found.trackName,
+            submittedAt: found.submittedAt
+          };
+        }
+      }
+
+      if (ticket) {
+        document.getElementById('ticket-reg-id').textContent = ticket.registrationId;
+        document.getElementById('ticket-fullname').textContent = ticket.fullName;
+        document.getElementById('ticket-type').textContent = ticket.participationType === 'team' ? `Team (${ticket.teamName})` : 'Solo Participant';
+        document.getElementById('ticket-college').textContent = ticket.college;
+        document.getElementById('ticket-track').textContent = ticket.trackName;
+        document.getElementById('ticket-title').textContent = ticket.problemTitle;
+        document.getElementById('ticket-timestamp').textContent = new Date(ticket.submittedAt).toLocaleString();
+
+        document.getElementById('btn-track-status').href = `status.html?id=${ticket.registrationId}`;
+      } else if (regId) {
+        document.getElementById('ticket-reg-id').textContent = regId;
+      }
+
+      // Copy Reg ID button
+      document.getElementById('btn-copy-id').addEventListener('click', () => {
+        const idText = document.getElementById('ticket-reg-id').textContent.trim();
+        navigator.clipboard.writeText(idText).then(() => {
+          alert(`Copied Registration ID: ${idText}`);
+        }).catch(() => {
+          prompt('Your Registration ID:', idText);
+        });
+      });
+
+      // Print ticket
+      document.getElementById('btn-print').addEventListener('click', () => {
+        window.print();
+      });
+    });
+  </script>
+</body>
+</html>

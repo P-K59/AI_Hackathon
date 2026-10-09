@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Submission Status | Nirmaan AI Hackathon 2026 (Nagpur)</title>
+  <meta name="description" content="Securely verify and check review stage of your Nirmaan AI Hackathon 2026 registration (Nagpur CoE).">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color: var(--bg-cloud);">
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="assets/images/ai-hackathon-logo.jpg" alt="Nirmaan AI Hackathon 2026 Logo" class="brand-logo-img">
+        <div class="brand-text-wrap">
+          <span class="brand-title">Nirmaan AI Hackathon 2026</span>
+          <span class="brand-subtitle">Centre of Excellence • Nagpur</span>
+        </div>
+      </a>
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <a href="index.html" class="nav-link" style="font-size:0.9rem;">← Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Key Partners Mini Bar -->
+  <div style="background:#FFFFFF; border-bottom:1px solid var(--border-color); padding:0.5rem 1rem;">
+    <div style="max-width:var(--container-max); margin:0 auto; display:flex; justify-content:center; align-items:center; gap:1.5rem; flex-wrap:wrap;">
+      <span style="font-size:0.75rem; text-transform:uppercase; font-weight:700; color:var(--ink-light);">Supported By:</span>
+      <img src="assets/images/redington-foundation.jpg" alt="Redington Foundation" style="height:22px;">
+      <img src="assets/images/nirmaan-org.png" alt="Nirmaan.org" style="height:22px;">
+      <img src="assets/images/microsoft.svg" alt="Microsoft" style="height:18px;">
+    </div>
+  </div>
+
+  <main class="container" style="padding-top: 3rem; padding-bottom: 5rem; max-width: 640px;">
+    
+    <div class="section-header" style="margin-bottom: 2rem;">
+      <span class="section-tag">Student Verification</span>
+      <h1 class="section-title" style="font-size: 2rem;">Track Your Submission</h1>
+      <p class="section-subtitle">
+        Enter your Registration ID and registered email or 10-digit mobile number to view your current review stage.
+      </p>
+    </div>
+
+    <!-- Lookup Form Card -->
+    <div style="background:#FFFFFF; border-radius:var(--radius-lg); padding:2rem 1.75rem; box-shadow:var(--shadow-md); border:1px solid var(--border-color); margin-bottom:2rem;">
+      <form id="status-lookup-form">
+        <div class="form-group">
+          <label for="lookup-reg-id" class="form-label">Registration ID <span class="required-star">*</span></label>
+          <input type="text" id="lookup-reg-id" class="form-input" placeholder="e.g. AIHACK-2026-1042" required style="font-family:monospace; text-transform:uppercase;">
+        </div>
+
+        <div class="form-group">
+          <label for="lookup-contact" class="form-label">Registered Email or 10-Digit Mobile <span class="required-star">*</span></label>
+          <input type="text" id="lookup-contact" class="form-input" placeholder="e.g. student@college.edu or 9823012345" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;" id="btn-check-status">
+          Verify & Check Status
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </form>
+
+      <div id="lookup-error-box" style="display:none; background:#FFF1F2; border:1px solid #FECDD3; border-radius:var(--radius-md); padding:1rem; margin-top:1.25rem; font-size:0.9rem; color:#BE123C;">
+        <!-- Error text injected by JS -->
+      </div>
+    </div>
+
+    <!-- Status Result Card -->
+    <div id="status-result-card" style="display:none; background:#FFFFFF; border-radius:var(--radius-lg); padding:2rem 1.75rem; box-shadow:var(--shadow-lg); border:1.5px solid var(--border-color); animation:fade-in-slide 0.3s ease;">
+      
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.25rem; padding-bottom:1rem; border-bottom:1px solid #F1F5F9;">
+        <div>
+          <span style="font-size:0.8rem; font-weight:700; color:var(--ink-light); text-transform:uppercase;">Registration ID</span>
+          <h2 id="res-reg-id" style="font-family:monospace; font-size:1.5rem; color:var(--primary); font-weight:800; margin-top:2px;">—</h2>
+        </div>
+        <div id="res-status-chip-wrap">
+          <span class="status-chip submitted" id="res-status-chip">Submitted</span>
+        </div>
+      </div>
+
+      <!-- Lifecycle Stage Timeline -->
+      <div style="margin-bottom:1.5rem; background:#F8FAFC; border-radius:var(--radius-md); padding:1rem;">
+        <h4 style="font-size:0.85rem; font-weight:700; color:var(--ink-light); text-transform:uppercase; margin-bottom:0.75rem;">Review Progression</h4>
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.5rem; text-align:center; font-size:0.75rem; font-weight:700;">
+          <div id="prog-node-1" style="padding:0.5rem 0.25rem; border-radius:4px; background:#D1FAE5; color:#065F46;">
+            ✓ 1. Registered
+          </div>
+          <div id="prog-node-2" style="padding:0.5rem 0.25rem; border-radius:4px; background:#E2E8F0; color:#475569;">
+            2. Pre-Screening
+          </div>
+          <div id="prog-node-3" style="padding:0.5rem 0.25rem; border-radius:4px; background:#E2E8F0; color:#475569;">
+            3. Final Shortlist
+          </div>
+        </div>
+      </div>
+
+      <!-- Friendly status explanation message -->
+      <div id="res-status-explanation" style="background:#EEF2FF; border:1px solid #C7D2FE; border-radius:var(--radius-md); padding:1rem; font-size:0.925rem; color:#3730A3; line-height:1.5; margin-bottom:1.5rem;">
+        <!-- Status text injected by JS -->
+      </div>
+
+      <!-- Details Summary -->
+      <div class="review-data-grid">
+        <div class="review-data-item">
+          <div class="review-data-label">Participant / Leader</div>
+          <div class="review-data-value" id="res-name">—</div>
+        </div>
+        <div class="review-data-item">
+          <div class="review-data-label">College</div>
+          <div class="review-data-value" id="res-college">—</div>
+        </div>
+        <div class="review-data-item full-width">
+          <div class="review-data-label">Problem Title</div>
+          <div class="review-data-value" id="res-title">—</div>
+        </div>
+        <div class="review-data-item">
+          <div class="review-data-label">Track</div>
+          <div class="review-data-value" id="res-track">—</div>
+        </div>
+        <div class="review-data-item">
+          <div class="review-data-label">Submitted On</div>
+          <div class="review-data-value" id="res-date">—</div>
+        </div>
+      </div>
+
+      <div style="margin-top:1.5rem; display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap;">
+        <button type="button" class="btn btn-primary btn-sm" id="btn-status-download-shortlist" style="display:none;">
+          📥 Download Official Shortlist CSV
+        </button>
+        <a href="index.html" class="btn btn-secondary btn-sm">Return to Home</a>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      HackathonAPI.init();
+      const form = document.getElementById('status-lookup-form');
+      const errBox = document.getElementById('lookup-error-box');
+      const resultCard = document.getElementById('status-result-card');
+
+      // Check URL parameters for prefill
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlId = urlParams.get('id');
+      if (urlId) {
+        document.getElementById('lookup-reg-id').value = urlId;
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        errBox.style.display = 'none';
+
+        const regId = document.getElementById('lookup-reg-id').value.trim();
+        const contact = document.getElementById('lookup-contact').value.trim();
+
+        if (!regId || !contact) {
+          errBox.textContent = 'Please enter both your Registration ID and registered email or mobile number.';
+          errBox.style.display = 'block';
+          return;
+        }
+
+        const match = HackathonAPI.lookupStatus(regId, contact);
+
+        if (!match) {
+          errBox.textContent = 'No matching registration found. Please check your Registration ID and contact details carefully.';
+          errBox.style.display = 'block';
+          resultCard.style.display = 'none';
+          return;
+        }
+
+        // Display results
+        document.getElementById('res-reg-id').textContent = match.registrationId;
+        document.getElementById('res-name').textContent = match.fullName;
+        document.getElementById('res-college').textContent = match.collegeName;
+        document.getElementById('res-title').textContent = match.problemTitle;
+        document.getElementById('res-track').textContent = match.trackName;
+        document.getElementById('res-date').textContent = new Date(match.submittedAt).toLocaleDateString();
+
+        const displayStatus = match.displayStatus || match.status;
+        const chip = document.getElementById('res-status-chip');
+        chip.className = `status-chip ${displayStatus.toLowerCase().replace(/\s+/g, '_')}`;
+        chip.textContent = displayStatus;
+
+        const explBox = document.getElementById('res-status-explanation');
+        const prog2 = document.getElementById('prog-node-2');
+        const prog3 = document.getElementById('prog-node-3');
+        const dlBtn = document.getElementById('btn-status-download-shortlist');
+
+        if (displayStatus === 'Submitted') {
+          explBox.innerHTML = `
+            <strong>Status: Submitted & Queued</strong><br>
+            Your idea has been received and verified. The faculty evaluation panel will begin pre-screening following the registration close date (Oct 12, 2026).
+          `;
+          prog2.style.background = '#E2E8F0'; prog2.style.color = '#475569';
+          prog3.style.background = '#E2E8F0'; prog3.style.color = '#475569';
+          dlBtn.style.display = 'none';
+        } else if (displayStatus === 'Under Review') {
+          explBox.innerHTML = `
+            <strong>Status: Under Active Pre-Screening</strong><br>
+            The faculty evaluation committee is assessing your proposal against the official scoring rubric. Shortlist results for the <strong>October 15–16, 2026</strong> Grand Finale will be officially announced once declared by the committee.
+          `;
+          prog2.style.background = '#FEF3C7'; prog2.style.color = '#92400E'; prog2.textContent = '⚡ In Review';
+          prog3.style.background = '#E2E8F0'; prog3.style.color = '#475569';
+          dlBtn.style.display = 'none';
+        } else if (displayStatus === 'Shortlisted' || displayStatus === 'Finalist Confirmed') {
+          explBox.innerHTML = `
+            <strong style="color:#065F46;">Congratulations! Shortlisted for the Final Round</strong><br>
+            Your project has been selected for the Artificial Intelligence Learning Labs Final Hackathon round on <strong>October 15–16, 2026</strong>. Check your registered email for venue and lab briefing details.
+          `;
+          explBox.style.background = '#ECFDF5';
+          explBox.style.borderColor = '#A7F3D0';
+          prog2.style.background = '#D1FAE5'; prog2.style.color = '#065F46';
+          prog3.style.background = '#D1FAE5'; prog3.style.color = '#065F46'; prog3.textContent = '✓ Shortlisted';
+          dlBtn.style.display = 'inline-flex';
+          dlBtn.onclick = () => HackathonAPI.downloadShortlistCSV();
+        } else {
+          explBox.innerHTML = `
+            <strong>Status: Review Complete</strong><br>
+            Thank you for participating! While your project was not shortlisted for the finalist spots this time, all registered students receive participation credits and access to AI Learning Labs workshops.
+          `;
+          prog2.style.background = '#D1FAE5'; prog2.style.color = '#065F46';
+          prog3.style.background = '#F3F4F6'; prog3.style.color = '#4B5563';
+          dlBtn.style.display = 'none';
+        }
+
+        resultCard.style.display = 'block';
+        resultCard.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
